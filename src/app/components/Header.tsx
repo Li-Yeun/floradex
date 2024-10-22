@@ -3,33 +3,33 @@ import Image from 'next/image';
 function Header() {
   return (
     <div className='h-full'>
-      <div className='border-container fixed -mt-[65vw] aspect-[751/501] w-full'>
+      <div className='relative aspect-[751/501] h-full w-full'>
         <Image
           src='/images/header-background.png'
           alt='header background'
           layout='fill'
-          className='-z-20'
+          className='z-10 object-cover object-right-bottom'
         ></Image>
 
-        <div className='flex h-full w-full justify-end'>
-          <div className='relative mr-[2%] aspect-square h-[100%] w-[22%]'>
+        <div className='relative flex h-full w-full justify-end'>
+          <div className='absolute bottom-[10%] right-[3%] aspect-square h-auto w-[20%]'>
             <Image
               src='/images/header-camera.png'
               alt='header background'
               layout='fill'
-              className='z-10 translate-y-[27.5%] object-contain'
+              className='z-20 object-contain'
             ></Image>
           </div>
         </div>
-      </div>
 
-      <div className='border-container fixed -mt-[6vw] aspect-[390/62] w-full'>
-        <Image
-          src='/images/header-balk.svg'
-          alt='header background'
-          layout='fill'
-          className='z-10'
-        ></Image>
+        <div className='relative aspect-[390/62]'>
+          <Image
+            src='/images/header-balk.svg'
+            alt='header background'
+            layout='fill'
+            className='oject-contain z-30 translate-y-[-40%]'
+          ></Image>
+        </div>
       </div>
     </div>
   );

@@ -14,12 +14,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
-      <body className='flex h-full flex-col'>
+      <body className='flex min-h-screen flex-col'>
         {/* <header className='mb-[10vw] h-[20dvh]'> */}
-        <header className='pt-[calc(10vw+10svh)]'>
+        <header className='h-[6rem]'>
           <Header />
         </header>
-        <div className='content-container flex flex-auto flex-col'>
+        <div className='content-container flex flex-grow flex-col'>
           {children}
         </div>
       </body>
