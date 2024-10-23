@@ -8,7 +8,7 @@ import { useEffect } from 'react';
 
 export default function Home() {
   return (
-    <div className='bg-floragreen relative box-border flex flex-1 border-red-500 pt-10'>
+    <div className='bg-floragreen relative box-border flex max-h-[100%] flex-1 border-red-500 pt-10'>
       <div className='grid flex-1 grid-cols-12 grid-rows-12'>
         <div className='relative col-span-12 row-span-4 row-start-1 border-[0px] border-red-600'>
           <div>
@@ -44,22 +44,19 @@ export default function Home() {
           ></Image>
         </div>
 
-        <div className='relative col-span-12 row-span-1 row-start-9 flex translate-y-[30%] items-center justify-center border-[0px] border-blue-600'>
+        <div className='relative col-span-12 row-span-3 row-start-9 flex flex-col items-center justify-center gap-5 border-[0px] border-blue-600'>
           <button
-            className={`title-button ${domine.className} w-[80%] rounded-3xl bg-[rgba(0,0,0,.78)] py-[.5rem] text-3xl text-white`}
+            className={`title-button ${domine.className} w-[20rem] max-w-[70%] overflow-hidden text-ellipsis whitespace-nowrap rounded-3xl bg-[rgba(0,0,0,.78)] text-[200%] text-white`}
           >
             login
           </button>
-        </div>
 
-        <div className='relative col-span-12 row-span-1 row-start-11 flex translate-y-[-30%] items-center justify-center border-[0px] border-blue-600'>
           <button
-            className={`title-button ${domine.className} w-[80%] rounded-3xl bg-white py-[.5rem] text-3xl text-black`}
+            className={`title-button ${domine.className} w-[20rem] max-w-[70%] overflow-hidden text-ellipsis whitespace-nowrap rounded-3xl bg-white text-[200%] text-black`}
           >
             scan
           </button>
         </div>
-        {/*  */}
       </div>
     </div>
   );
