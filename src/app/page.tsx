@@ -35,7 +35,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className='relative col-span-12 row-span-3 row-start-5 border-[0px] border-blue-600'>
+        <div className='relative col-span-12 row-span-3 row-start-5 border-[0px] border-blue-600 md:row-span-4'>
           <Image
             src='/images/logo.png'
             alt='header background'

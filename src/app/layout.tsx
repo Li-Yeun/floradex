@@ -16,7 +16,7 @@ export default function RootLayout({
     <html lang='en'>
       <body className='flex h-[100svh] flex-col'>
         {/* <header className='mb-[10vw] h-[20dvh]'> */}
-        <header className='h-[6rem]'>
+        <header className='flex h-[6rem]'>
           <Header />
         </header>
         <div className='content-container flex min-h-[calc(100svh-6rem)] flex-grow flex-col'>
