@@ -39,4 +39,135 @@
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
   }
+
+  .no-overflow {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .black-gradient {
+    background: rgb(0, 0, 0);
+    background: -moz-linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 1) 18%,
+      rgba(0, 0, 0, 0.8624338624338624) 39%,
+      rgba(0, 0, 0, 0.7248677248677249) 53%,
+      rgba(0, 0, 0, 0.30687830687830686) 83%,
+      rgba(0, 0, 0, 0) 100%
+    );
+    background: -webkit-linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 1) 18%,
+      rgba(0, 0, 0, 0.8624338624338624) 39%,
+      rgba(0, 0, 0, 0.7248677248677249) 53%,
+      rgba(0, 0, 0, 0.30687830687830686) 83%,
+      rgba(0, 0, 0, 0) 100%
+    );
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 1) 18%,
+      rgba(0, 0, 0, 0.8624338624338624) 39%,
+      rgba(0, 0, 0, 0.7248677248677249) 53%,
+      rgba(0, 0, 0, 0.30687830687830686) 83%,
+      rgba(0, 0, 0, 0) 100%
+    );
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#000000",GradientType=1);
+  }
+
+  /* .new-gradient {
+    background: linear-gradient(90deg, #ffe100 10%, #ff05ee 63%, #ff0000 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  } */
+
+  .new-gradient {
+    background: linear-gradient(
+      90deg,
+      #ff05ee 1%,
+      #ffe100 15%,
+      #ff05ee 63%,
+      #ff0000 100%
+    );
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .btn-shine {
+    background-size: 300% auto; /* Make the background-size larger for smooth looping */
+    background-position: -150%; /* Start farther left for a gradual entry */
+
+    animation: shine 6s linear infinite;
+  }
+
+  @keyframes shine {
+    0% {
+      background-position: -150%; /* Start off the left edge */
+    }
+    100% {
+      background-position: 150%; /* Move past the right edge for a seamless effect */
+    }
+  }
+
+  @keyframes size {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+
+  @keyframes orange {
+    from {
+      @apply bg-red-500;
+    }
+    to {
+      @apply bg-orange-500;
+    }
+  }
+
+  @keyframes yellow {
+    from {
+      @apply bg-red-500;
+    }
+    50% {
+      @apply bg-orange-500;
+    }
+    to {
+      @apply bg-yellow-500;
+    }
+  }
+
+  @keyframes lime {
+    from {
+      @apply bg-red-500;
+    }
+    30% {
+      @apply bg-orange-500;
+    }
+    70% {
+      @apply bg-yellow-500;
+    }
+    to {
+      @apply bg-lime-500;
+    }
+  }
+
+  @keyframes green {
+    from {
+      @apply bg-red-500;
+    }
+    25% {
+      @apply bg-orange-500;
+    }
+    50% {
+      @apply bg-yellow-500;
+    }
+    75% {
+      @apply bg-lime-500;
+    }
+    to {
+      @apply bg-green-500;
+    }
+  }
 }

@@ -1,4 +1,5 @@
 import type { Config } from 'tailwindcss';
+const plugin = require('tailwindcss/plugin');
 
 const config: Config = {
   content: [
@@ -16,6 +17,14 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    plugin(function ({ addVariant }: { addVariant: any }) {
+      addVariant('filled', [
+        '&::-webkit-progress-value',
+        '&::-moz-progress-bar',
+      ]);
+      addVariant('unfilled', ['&::-webkit-progress-bar', '&']);
+    }),
+  ],
 };
 export default config;
