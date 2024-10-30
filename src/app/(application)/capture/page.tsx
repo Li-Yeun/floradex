@@ -6,15 +6,13 @@ import {
   ABeeZee,
   Grenze_Gotisch,
 } from 'next/font/google';
+import FlowerDetailsCard from '@/app/components/FlowerDetailsCard';
 
 const libre_Franklin = Libre_Franklin({ subsets: ['latin'], weight: '900' });
 const baloo_Bhaijaan_2 = Baloo_Bhaijaan_2({
   subsets: ['latin'],
   weight: '800',
 });
-
-const aBeeZee = ABeeZee({ subsets: ['latin'], weight: '400' });
-const grenze_Gotisch = Grenze_Gotisch({ subsets: ['latin'], weight: '400' });
 
 export default function CapturePage() {
   // Container Size
@@ -66,54 +64,6 @@ export default function CapturePage() {
         ></Image>
       </div>
 
-      <div
-        style={{ maxWidth: `${MAX_WIDTH}px` }}
-        className={`relative z-[30] mt-[-2rem] flex w-[100%] flex-1 flex-col items-center justify-self-center rounded-[25px] border-[5px] border-x-[2px] border-[#0b0b0b33] bg-white`}
-      >
-        <div className='mt-[1.5rem] flex aspect-[8/2] w-[3rem] items-center justify-center rounded-[20px] bg-[#000000ba]'>
-          <div className='h-[50%] w-[80%] rounded-[20px] bg-[#ffffff]'></div>
-        </div>
-
-        <div
-          className={`${aBeeZee.className} no-overflow max-w-full px-[1rem] pb-[8rem] pt-[1.5rem]`}
-        >
-          <hr className='pb-[2rem]' />
-          <div className='tex- flex flex-col items-center justify-center'>
-            <span
-              className={`${grenze_Gotisch.className} max-w-full text-[4rem] leading-[3rem]`}
-            >
-              {title}
-            </span>
-          </div>
-          <br />
-          <br />
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos nostrum
-          totam iste voluptate similique repellat consectetur mollitia quis
-          magni numquam, rerum tempore minus sequi, voluptatem accusamus natus
-          deserunt doloribus non fugit aliquam perspiciatis corrupti. Eius saepe
-          odit consequuntur rem dicta illo quam voluptatum, veritatis minus
-          delectus ex natus repudiandae aliquid at, sapiente et totam alias,
-          possimus in eaque itaque soluta pariatur non impedit! Asperiores
-          necessitatibus sit nisi fugit. Fugiat vero ipsam dolor, illo maiores
-          ipsa consequuntur dicta aperiam distinctio. Quas a, reprehenderit,
-          inventore nihil error quaerat, culpa provident dolor praesentium
-          perspiciatis corporis libero quam vitae! Aliquid modi autem magni
-          dolorum, pariatur voluptas earum praesentium perspiciatis commodi
-          facilis maxime distinctio impedit ratione, dicta explicabo. Veniam
-          saepe, veritatis quos similique tenetur natus! Consequatur soluta
-          voluptates, rem libero, illo officia et nam a impedit totam beatae
-          odit reprehenderit. Consequatur libero quam ipsum eos officiis nisi
-          ipsa iste numquam nemo dolore quas, accusantium natus ad aspernatur
-          non porro quidem tempora odio culpa recusandae veritatis. Non cum
-          nostrum adipisci enim voluptatibus veritatis doloremque nemo culpa
-          tenetur maxime, eveniet assumenda quas perferendis? Quidem iste,
-          pariatur voluptates inventore error itaque sunt, magnam deserunt quasi
-          et totam animi repellat, amet tempore impedit odio laboriosam aut sit
-          sequi nostrum.
-          <hr className='mt-[2.5rem]' />
-        </div>
-      </div>
-
       <div className='absolute top-0 ml-[3%] mt-[8%] flex w-[7rem] max-w-[35%] flex-col'>
         <div className='z-[100] flex aspect-[8/2] flex-col items-center justify-center rounded-full border-black bg-white'>
           <div className='h-[65%] w-[90%] drop-shadow-[0px_2px_1px_rgba(0,0,0,.5)]'>
@@ -121,7 +71,7 @@ export default function CapturePage() {
             <progress
               value={progress_value}
               max={100}
-              className={`${temparture(progress_value)} filled:rounded-full unfilled:bg-[#ff000000] unfilled:rounded-full h-full w-full animate-[size_2s_ease-out] appearance-none rounded-full align-top`}
+              className={`${temparture(progress_value)} h-full w-full animate-[size_2s_ease-out] appearance-none rounded-full align-top filled:rounded-full unfilled:rounded-full unfilled:bg-[#ff000000]`}
             ></progress>
           </div>
         </div>
@@ -146,6 +96,13 @@ export default function CapturePage() {
         >
           Nr#001
         </span>
+      </div>
+
+      <div
+        style={{ maxWidth: `min(${MAX_WIDTH}px, 100%)` }}
+        className='relative z-20 mt-[-2rem] flex-1 justify-self-center'
+      >
+        <FlowerDetailsCard title={title} />
       </div>
     </>
   );
